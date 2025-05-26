@@ -1,0 +1,8 @@
+Z_CRT
+PCM8A
+MCDRV
+SP_RUN.X %1
+PAUSE
+MCDRV -r
+PCM8A -r
+
