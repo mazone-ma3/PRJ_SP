@@ -1,0 +1,13 @@
+-lib d:\hc386\lib\tbios
+-lib d:\hc386\lib\hce
+-lib d:\hc386\lib\hcc
+-lib d:\hc386\lib\na
+-lib d:\hc386\lib\snd
+-lib d:\hc386\lib\msvdrv
+-lib d:\hc386\lib\fmcfrb
+-lib d:\hc386\lib\t_os
+-lib d:\hc386\lib\his
+
+-pack
+-stack 160000
+-twocase
