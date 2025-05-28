@@ -1,1 +1,0 @@
-mgsdrv /zSPRUN
