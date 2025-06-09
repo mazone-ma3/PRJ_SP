@@ -5,4 +5,6 @@
 
 使用コンパイラ　z88dk、High C、GCC-ia16、Digital Mars C、Open Watcom、X68000 GCC 他
 
-詳細はWeb参照。
+コンパイラを用意してmakeまたは.batを実行して生成してください。
+
+詳細はWebも参照。
