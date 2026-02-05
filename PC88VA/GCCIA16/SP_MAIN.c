@@ -1234,7 +1234,7 @@ void set_sprite(void)
 		write_psg(6,127);
 		write_psg(11,0);
 		write_psg(12,15);
-		write_psg(7,0x1c);  // 10011100
+		write_psg(7,0x1c);  // 00011100
 		write_psg(13,9);
 		write_psg(10,0x10);
 		_enable();
