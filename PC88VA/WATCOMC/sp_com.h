@@ -61,10 +61,11 @@ typedef void (*SUBFUNC)(int i);
 	*(spram++) = 0;\
 }*/
 
+/* ADR is a linear word offset; SPDA maps TVRAM offset 8000h to word 8000h. */
 #define PUT_SP( X, Y, X_SIZE, Y_SIZE, ADR) {\
 	*(spram++) = (Y_SIZE) | (Y & 0x01ff) | 0x0200;\
 	*(spram++) = (X_SIZE) | (X & 0x03ff);\
-	*(spram++) = (ADR);\
+	*(spram++) = (((ADR) & 0x4000u) << 1) | ((ADR) & 0x3fffu);\
 	*(spram++) = 0;\
 }
 
