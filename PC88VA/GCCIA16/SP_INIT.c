@@ -440,17 +440,17 @@ void main()
 	/* TSP coommand */
 	while(inportb(0x142) & 0x05);
 	outportb(0x142, 0x82);	/* SPRON スプライトON */
-	while(inportb(0x142) & 0x05);
+	while(inportb(0x142) & 0x01);
 	outportb(0x146, (SPR_ATR) / 256);	/* スプライト制御テーブルアドレス上位 */
-	while(inportb(0x142) & 0x05);
+	while(inportb(0x142) & 0x01);
 	outportb(0x146, 0x00);
-	while(inportb(0x142) & 0x05);
+	while(inportb(0x142) & 0x01);
 	outportb(0x146, 32 * 4 | 0x02)	/* 横32枚 縦方向2倍 */;
 
 
 	while(inportb(0x142) & 0x05);
 	outportb(0x142, 0x15);	/* CURDEF */
-	while(inportb(0x142) & 0x05);
+	while(inportb(0x142) & 0x01);
 	outportb(0x146, 0x02);	/* カーソルOFF */
 
 	GVRAM_ON();
