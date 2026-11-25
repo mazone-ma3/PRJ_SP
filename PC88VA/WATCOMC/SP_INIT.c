@@ -458,20 +458,20 @@ void main()
 	paint2(0);
 //	pal_all(CHRPAL_NO, org_pal);
 
-	/* TSP coommand */
+	/* TSP: wait for BUSY and IBF before commands, only IBF before parameters. */
 	while(inp(0x142) & 0x05);
 	outp(0x142, 0x82);	/* SPRON スプライトON */
-	while(inp(0x142) & 0x05);
+	while(inp(0x142) & 0x01);
 	outp(0x146, (SPR_ATR) / 256);	/* スプライト制御テーブルアドレス上位 */
-	while(inp(0x142) & 0x05);
+	while(inp(0x142) & 0x01);
 	outp(0x146, 0x00);
-	while(inp(0x142) & 0x05);
+	while(inp(0x142) & 0x01);
 	outp(0x146, 32 * 4 | 0x02)	/* 横32枚 縦方向2倍 */;
 
 
 	while(inp(0x142) & 0x05);
 	outp(0x142, 0x15);	/* CURDEF */
-	while(inp(0x142) & 0x05);
+	while(inp(0x142) & 0x01);
 	outp(0x146, 0x02);	/* カーソルOFF */
 
 	GVRAM_ON();
